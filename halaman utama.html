@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PHYNIX</title>
+    <link rel="stylesheet" href="kebutuhan.css">
+</head>
+<body>
+    <div class="container">
+        <img src="img/phynix.jpg" alt="Foto Profil" class="profile-img">
+        <h1>Physisc Learning and Experiment Laboratory</h1>
+        <p>Deskripsi singkat tentang diri kamu.</p>
+        <div class="contact">
+            <a href="anasrosikin5@.com">Email</a> |
+            <a href="https://radenintan.ac.id">Kampus</a> |
+            <a href="https://www.instagram.com/lab.physicseducation/">Instagram</a> |
+            <a href="https://fisika.tarbiyah.radenintan.ac.id/">FisikAdalahKita</a>
+        </div>
+
+       <!-- Portofolio -->
+<div class="portfolio">
+    <h2>Portofolio</h2>
+    <div class="projects">
+        <div class="project">
+            <img src="img/phynix.jpg" alt="Foto Profil" class="profile-img">
+            <h3>Proyek 1</h3>
+            <p>Deskripsi proyek 1.</p>
+            <a href="https://link-ke-proyek-1.com">Lihat Proyek</a>
+        </div>
+        
+        <!-- Proyek 2 -->
+        <div class="project">
+            <h3>Proyek 2</h3>
+            <p>Deskripsi proyek 2.</p>
+            <a href="https://link-ke-proyek-2.com">Lihat Proyek</a>
+        </div>
+
+        <!-- Proyek 3 -->
+        <div class="project">
+            <h3>Proyek 3</h3>
+            <p>Deskripsi proyek 3.</p>
+            <a href="https://link-ke-proyek-3.com">Lihat Proyek</a>
+        </div>
+        
+        <!-- Tambahkan proyek lain sesuai kebutuhan -->
+    </div>
+</div>
+
+        <!-- Pengumuman -->
+        <div class="announcement">
+            <h2>Pengumuman</h2>
+            <p>Masukkan nama Anda untuk melihat pengumuman.</p>
+            <input type="text" id="nameInput" placeholder="Masukkan Nama">
+            <button onclick="checkAnnouncement()">Lihat Pengumuman</button>
+
+            <div id="announcementResult" style="margin-top: 20px; font-weight: bold;"></div>
+        </div>
+
+    </div>
+
+    <!-- Tambahkan Script untuk logika pengumuman -->
+    <script>
+        const dataPengumuman = [
+            { nama: 'Budi', pengumuman: 'Selamat Budi, kamu lulus dengan nilai A!' },
+            { nama: 'Siti', pengumuman: 'Selamat Siti, kamu lulus dengan nilai B+!' },
+            { nama: 'Agus', pengumuman: 'Maaf Agus, kamu belum lulus. Coba lagi tahun depan.' },
+            // Tambahkan nama peserta lainnya di sini
+        ];
+
+        function checkAnnouncement() {
+            const nameInput = document.getElementById('nameInput').value;
+            const resultDiv = document.getElementById('announcementResult');
+
+            // Cari nama di dalam data pengumuman
+            const peserta = dataPengumuman.find(p => p.nama.toLowerCase() === nameInput.toLowerCase());
+
+            // Jika nama ditemukan, tampilkan pengumuman
+            if (peserta) {
+                resultDiv.textContent = peserta.pengumuman;
+                resultDiv.style.color = 'green';
+            } else {
+                resultDiv.textContent = 'Nama tidak ditemukan atau tidak ada pengumuman untuk nama tersebut.';
+                resultDiv.style.color = 'red';
+            }
+        }
+    </script>
+
+</body>
+</html>
