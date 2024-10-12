@@ -1,0 +1,104 @@
+/* Mengatur tampilan konten ke tengah halaman */
+body {
+    height: 100vh; /* Mengambil tinggi penuh dari viewport */
+    display: flex;
+    justify-content: center; /* Mengatur horizontal centering */
+    align-items: center; /* Mengatur vertical centering */
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4; /* Warna latar belakang */
+}
+
+.container {
+    width: 100%;
+    max-width: 800px;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px; /* Menambahkan border radius untuk tampilan lebih halus */
+    text-align: center; /* Mengatur teks agar berada di tengah */
+}
+
+.profile-img {
+    width: 150px;
+    border-radius: 50%;
+    margin: 0 auto;
+    display: block;
+}
+
+h1, p {
+    text-align: center;
+}
+
+.contact {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.contact a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #333;
+}
+
+.portfolio {
+    margin-top: 40px;
+}
+
+.portfolio h2 {
+    text-align: center;
+}
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.project {
+    background-color: #f4f4f4;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.project a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.project a:hover {
+    color: #0056b3;
+}
+
+/* Gaya untuk bagian pengumuman */
+.announcement {
+    margin-top: 40px;
+    text-align: center;
+}
+
+#nameInput {
+    padding: 10px;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#announcementResult {
+    margin-top: 20px;
+    font-size: 18px;
+}
